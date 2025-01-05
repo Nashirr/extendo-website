@@ -10,7 +10,7 @@ const Testimonials = () => {
     >
       <div className="relative z-10 text-center px-4 sm:px-6 lg:px-8">
         <h1 className="text-center text-3xl sm:text-3xl md:text-4xl font-bold text-white drop-shadow-lg leading-tight">
-          Hear It From <span>Those We've Helped</span>
+          Hear It From <span className='text-blue-500'>Those We've Helped</span>
         </h1>
         <p className="mt-4 text-lg sm:text-xl text-gray-400 max-w-3xl mx-auto leading-relaxed">
           Real stories from our amazing clients who experienced exceptional growth and success.

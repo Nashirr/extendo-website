@@ -1,10 +1,15 @@
 import React from 'react';
 import '@/app/globals.css';
 import Link from 'next/link';
+import Footer2 from '@/components/Footer2';  // Import Footer2
+import { FloatingNav } from '@/components/ui/FloatingNav';
+import { dmItems } from '@/data';
 
 const DigitalMarketing = () => {
   return (
-    <div className="p-6 relative bg-gradient-to-br from-gray-900 to-black">
+    <div className="px-0 pt-1 relative bg-gradient-to-br from-gray-900 to-black">
+      <div className='pt-11'>
+      <FloatingNav navItems={dmItems}/>
       <Link href="/">
         <div className="absolute top-6 left-6 cursor-pointer text-5xl font-bold text-blue-500 hover:scale-110 transition-transform duration-300">
           EX
@@ -74,7 +79,8 @@ const DigitalMarketing = () => {
       </section>
 
       {/* Call to Action Section */}
-      <section className="text-center py-20 px-6 bg-gradient-to-r from-blue-600 to-blue-800 rounded-lg mt-16 animate-fade-in">
+      <div className='w-full'>
+      <section className="text-center py-20 bg-gradient-to-r from-blue-600 to-blue-800 rounded-lg mt-16 animate-fade-in">
         <h2 className="text-4xl font-bold text-white leading-tight mb-6">
           Ready to Boost Your Marketing Efforts?
         </h2>
@@ -84,8 +90,16 @@ const DigitalMarketing = () => {
         <Link href="/Services"><button className="bg-blue-500 hover:bg-blue-800 text-white font-bold py-3 px-8 rounded-lg text-lg transition-transform hover:scale-105">
           Get Started Now
         </button></Link>
-      </section> 
+      </section>
+
+      {/* Footer2 Component */}
+      <div className="mt-auto">
+        <Footer2 />
+      </div> {/* Add Footer2 at the bottom */}
+      </div>
+      </div>
     </div>
+
   );
 };
 

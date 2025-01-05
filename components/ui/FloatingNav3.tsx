@@ -9,7 +9,7 @@ import {
 import Link from "next/link";
 import { cn } from "@/lib/utils";
 
-export const FloatingNav = ({
+export const FloatingNav3 = ({
   navItems,
   className,
 }: {
@@ -26,11 +26,12 @@ export const FloatingNav = ({
   const dropdownRef = useRef<HTMLDivElement>(null);
 
   const moreItems = [
-    { name: "Business Consultancy", link: "/BusinessConsultancy" },
-    { name: "About Us", link: "/AboutUs" },
-    { name: "Insights", link: "/Insights" },
-    { name: "Contact", link: "/Contact" },
+    { name: "Web Development", link: "/WebDev" }, 
+    {name: "Digital Marketing", link: "/DigitalMarketing" }, 
+    { name: "Social Media", link: "/SocialMedia"  },
+    { name: "Business Consultancy", link: "/BusinessConsultancy"  },
   ];
+  
 
   useMotionValueEvent(scrollYProgress, "change", (current) => {
     if (typeof current === "number") {
@@ -92,18 +93,19 @@ export const FloatingNav = ({
                   {navItem.name}
                 </button>
                 {moreOpen && (
-                  <div className="absolute top-full right-0.5 mt-2 w-44 bg-[rgba(30,41,59,0.9)] text-white rounded-md shadow-lg z-50">
-                    {moreItems.map((item, index) => (
-                      <Link
-                        key={index}
-                        href={item.link}
-                        className="block px-4 py-2 hover:bg-[rgba(59,130,246,0.6)] text-xs"
-                        onClick={() => setMoreOpen(false)}
-                      >
-                        {item.name}
-                      </Link>
-                    ))}
-                  </div>
+                  <div className="absolute top-full left-[-60px] mt-2 w-44 bg-[rgba(30,41,59,0.9)] text-white rounded-md shadow-lg z-50">
+                  {moreItems.map((item, index) => (
+                    <Link
+                      key={index}
+                      href={item.link}
+                      className="block px-4 py-2 hover:bg-[rgba(59,130,246,0.6)] text-xs"
+                      onClick={() => setMoreOpen(false)}
+                    >
+                      {item.name}
+                    </Link>
+                  ))}
+                </div>
+                
                 )}
               </div>
             ) : (

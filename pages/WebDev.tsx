@@ -6,17 +6,22 @@ import Walkthrough from '@/components/Walkthrough';
 import { FaMixcloud } from "react-icons/fa";
 import { RiTeamFill } from "react-icons/ri";
 import { BiSupport } from "react-icons/bi";
+import Footer2 from '@/components/Footer2';
+import { FloatingNav } from '@/components/ui/FloatingNav';
+import { webItems } from '@/data';
 
 const WebDev = () => {
   return (
-    <div className="p-6 relative bg-gradient-to-br from-gray-900 to-black">
+    <div className="pt-1 relative bg-gradient-to-br from-gray-900 to-black">
+      <div className='pt-11'>
+      <FloatingNav  navItems={webItems}/>
       <Link href="/">
         <div className="absolute top-6 left-6 cursor-pointer text-5xl font-bold text-blue-500 hover:scale-110 transition-transform duration-300">
           EX
         </div>
       </Link>
       <div className="text-center mt-16 mb-16 animate-fade-in">
-        <h1 className="text-blue-500 text-6xl font-bold mt-12 mb-6">
+        <h1 className="text-blue-500 text-6xl font-bold mt-16 mb-6">
           <span className='text-gray-100'>Web Design &</span> Development
         </h1>
         <h2 className="text-2xl font-semibold text-gray-300 mb-2">
@@ -145,7 +150,7 @@ const WebDev = () => {
     </section>
 
       {/* Call to Action Section */}
-      <section className="text-center py-20 px-6 bg-gradient-to-r from-blue-600 to-blue-800 rounded-lg mt-16 animate-fade-in">
+      <section className="text-center py-20 px-6 bg-gradient-to-r from-blue-600 to-blue-800 rounded-lg mt-16 mb-0 animate-fade-in">
         <h2 className="text-4xl font-bold text-white leading-tight mb-6">
           Ready to Build Your Dream Website?
         </h2>
@@ -157,7 +162,12 @@ const WebDev = () => {
             Get Started Now
           </button>
         </Link>
+        
       </section>
+      <div>
+        <Footer2 />
+      </div>
+      </div>
     </div>
   );
 };

@@ -69,8 +69,8 @@ const BookApp = () => {
   };
 
   return (
-    <section className="py-20 bg-gray-50 dark:bg-gray-900">
-      <div className="container mx-auto px-6 lg:px-12">
+    <section className="min-h-screen py-20 bg-gray-50 dark:bg-gray-900 flex items-center justify-center">
+  <div className="container mx-auto px-6 lg:px-12 flex-grow">
         <h2 className="text-4xl font-bold text-center mb-8 text-gray-800 dark:text-white">
           Strategise. <span className="text-blue-500 font-extrabold">Extend</span>. Succeed.
         </h2>

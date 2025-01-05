@@ -4,6 +4,9 @@ import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { useRouter } from "next/router";
 import { FaArrowRight } from "react-icons/fa6";
+import { FloatingNav } from "./ui/FloatingNav";
+import { navItems } from "@/data";
+import Link from "next/link";
 
 const ServicesPage = () => {
   const [selectedServices, setSelectedServices] = useState<string[]>([]);
@@ -55,9 +58,15 @@ const ServicesPage = () => {
   return (
     <div className="bg-gray-50 dark:bg-gray-900 min-h-screen py-20 px-6">
       {/* Page Title and Subheading */}
-      <div className="text-center mb-12">
+      <div className="text-center mb-12 py-11">
+        <FloatingNav navItems={navItems}/>
+        <Link href="/">
+        <div className="absolute top-6 left-6 cursor-pointer text-5xl font-bold text-blue-500 hover:scale-110 transition-transform duration-300">
+          EX
+        </div>
+      </Link>
         <h1 className="text-4xl font-extrabold text-gray-900 dark:text-white">
-          Select Your Services
+          Select Your <span className="text-blue-500">Services</span> 
         </h1>
         <p className="mt-2 text-lg text-gray-600 dark:text-gray-400">
           Choose the services you need and proceed to book your appointment.
@@ -136,7 +145,7 @@ const ServicesPage = () => {
           {selectedServices.length > 0 && (
   <motion.button
     onClick={handleBookAppointment}
-    className="mt-10 w-full flex items-center justify-center py-3 px-5 font-semibold rounded-lg text-white bg-gradient-to-r from-blue-500 via-purple-600 to-indigo-500 shadow-lg shadow-blue-500/50 hover:shadow-purple-600/50 transition-all transform hover:scale-105 focus:outline-none"
+    className="mt-10 w-full flex items-center justify-center py-3 px-5 font-semibold rounded-lg text-white bg-gradient-to-r from-blue-500 to-purple-600 shadow-lg shadow-blue-500/50 hover:shadow-purple-600/50 transition-all transform hover:scale-105 focus:outline-none"
     whileHover={{ scale: 1.05 }}
   >
     <span className="mr-2">Book Appointment</span>

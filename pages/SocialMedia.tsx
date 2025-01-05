@@ -3,10 +3,15 @@ import '@/app/globals.css';
 import Link from 'next/link';
 import Packages from '@/components/Packages';
 import Walkthrough from '@/components/Walkthrough';
+import Footer2 from '@/components/Footer2';
+import { FloatingNav } from '@/components/ui/FloatingNav';
+import { smItems } from '@/data';
 
 const SocialMedia = () => {
   return (
-    <div className="p-6 relative bg-gradient-to-br from-gray-900 to-black">
+    <div className="pt-1 relative bg-gradient-to-br from-gray-900 to-black">
+      <div className='pt-11'>
+      <FloatingNav navItems={smItems} />
       <Link href="/">
         <div className="absolute top-6 left-6 cursor-pointer text-5xl font-bold text-blue-500 hover:scale-110 transition-transform duration-300">
           EX
@@ -90,6 +95,8 @@ const SocialMedia = () => {
           Get Started Now
         </button></Link>
       </section>
+      <Footer2 />
+    </div>
     </div>
   );
 };

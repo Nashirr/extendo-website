@@ -1,10 +1,15 @@
 import React from 'react';
 import "@/app/globals.css"; 
 import Link from 'next/link';
+import Footer2 from '@/components/Footer2';
+import { FloatingNav3 } from '@/components/ui/FloatingNav3';
+import { insightsItems } from '@/data';
 
 const Insights = () => {
   return (
     <div className="bg-gradient-to-br from-gray-900 to-black text-gray-100">
+      <div className='pt-12'>
+        <FloatingNav3 navItems={insightsItems} />
        <Link href="/">
         <div className="absolute top-6 left-6 cursor-pointer text-5xl font-bold text-blue-500 hover:scale-110 transition-transform duration-300">
           EX
@@ -98,7 +103,8 @@ const Insights = () => {
           </button>
         </form>
       </section>
-
+      <Footer2 />
+      </div>
     </div>
   );
 };

@@ -9,7 +9,7 @@ import {
 import Link from "next/link";
 import { cn } from "@/lib/utils";
 
-export const FloatingNav = ({
+export const FloatingNav2 = ({
   navItems,
   className,
 }: {
@@ -92,7 +92,7 @@ export const FloatingNav = ({
                   {navItem.name}
                 </button>
                 {moreOpen && (
-                  <div className="absolute top-full right-0.5 mt-2 w-44 bg-[rgba(30,41,59,0.9)] text-white rounded-md shadow-lg z-50">
+                  <div className="absolute top-full right-1 mt-2 w-44 bg-[rgba(30,41,59,0.9)] text-white rounded-md shadow-lg z-50">
                     {moreItems.map((item, index) => (
                       <Link
                         key={index}

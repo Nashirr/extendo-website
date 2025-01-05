@@ -29,3 +29,51 @@ export const navItems = [
   { name: "Social Media", link: "/SocialMedia" },
   { name: "More", link: "#" },
 ];
+
+export const webItems = [
+  { name: "Home", link: "/" },
+  { name: "Digital Marketing", link: "/DigitalMarketing" },
+  { name: "Social Media", link: "/SocialMedia" },
+  { name: "More", link: "#" },
+];
+
+export const dmItems = [
+  { name: "Home", link: "/" },
+  { name: "Web Development", link: "/WebDev" },
+  { name: "Social Media", link: "/SocialMedia" },
+  { name: "More", link: "#" },
+];
+
+export const smItems = [
+  { name: "Home", link: "/" },
+  { name: "Web Development", link: "/WebDev" },
+  { name: "Digital Marketing", link: "/DigitalMarketing" },
+  { name: "More", link: "#" },
+];
+
+export const bcItems = [
+  { name: "Home", link: "/" },
+  {  name: "Web Development", link: "/WebDev" },
+  {name: "Social Media", link: "/SocialMedia" },
+  { name: "More", link: "#" },
+];
+export const aboutItems = [
+  { name: "Home", link: "/" },
+  { name: "Insights", link: "/Insights"},
+  { name: "Conact", link: "/Contact" },
+  { name: "More", link: "#" },
+];
+
+export const insightsItems = [
+  { name: "Home", link: "/" },
+  {  name: "About Us", link: "/AboutUs" },
+  { name: "Conact", link: "/Contact" },
+  { name: "More", link: "#" },
+];
+
+export const contactItems = [
+  { name: "Home", link: "/" },
+  {  name: "About Us", link: "/AboutUs" },
+  { name: "Insights", link: "/Insights"},
+  { name: "More", link: "#" },
+];
